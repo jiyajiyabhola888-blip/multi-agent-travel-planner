@@ -84,7 +84,7 @@ The user provides their travel requirements, and the system processes them throu
                            │
                            ▼
                   👤 User Dashboard
-🔄 Complete Workflow
+##🔄 Complete Workflow
 👤 User
    │
    │ Enter trip requirements
@@ -106,7 +106,7 @@ The user provides their travel requirements, and the system processes them throu
 ⚡ FastAPI Backend
    │
    ▼
-🤖 Multi-Agent Travel System
+##🤖 Multi-Agent Travel System
    │
    ├── 📍 Destination Planning
    ├── 💰 Budget Planning
@@ -150,7 +150,7 @@ Focuses on local experiences, activities, and guide/local-travel experiences.
 
 Combines the information from the different planning components and generates the final itinerary.
 
-🛠️ Tech Stack
+##🛠️ Tech Stack
 Backend
 Python
 FastAPI
@@ -166,7 +166,7 @@ Git
 GitHub
 VS Code
 Swagger / OpenAPI
-📁 Project Structure
+##📁 Project Structure
 multi-agent-travel-planner/
 │
 ├── backend/
