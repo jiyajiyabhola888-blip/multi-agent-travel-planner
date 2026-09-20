@@ -1,172 +1,140 @@
-# 🌍 Multi-Agent Travel Planner
+# Multi-Agent Travel Planner
 
-An AI-powered travel planning application that creates personalized trip plans based on a user's destination, budget, travel preferences, interests, food preferences, accommodation choices, transportation preferences, and trip type.
+An AI-powered travel planning application that creates personalized travel plans based on user requirements such as destination, budget, travel dates, interests, food preferences, accommodation, transportation, and trip type.
 
-The project uses a **multi-agent architecture** where different AI agents handle different parts of the travel-planning process and a final planner combines their outputs into a complete itinerary.
-
----
-
-## ✨ Key Features
-
-- 🌍 Personalized travel planning
-- 🤖 Multi-agent AI architecture
-- 💰 Budget-aware trip planning
-- 🏨 Accommodation recommendations
-- 🚆 Transportation planning
-- 📍 Destination and activity planning
-- 🧭 Local experience / guide planning
-- 📅 Day-wise itinerary generation
-- ⚡ FastAPI backend
-- 📚 Interactive Swagger API documentation
-- 🖥️ Web frontend
-- 🧪 API testing support
+The project uses a Multi-Agent AI architecture where different agents handle different parts of travel planning and combine their results to generate a complete travel itinerary.
 
 ---
 
-## 🎯 Problem
+## **Features**
 
-Planning a trip usually requires checking many different things separately:
-
-- Where should I visit?
-- What places should I explore?
-- How much will the trip cost?
-- Where should I stay?
-- How should I travel?
-- What activities match my interests?
-- Can the complete plan fit my budget?
-
-This can make travel planning time-consuming and difficult to personalize.
-
----
-
-## 💡 Solution
-
-The Multi-Agent Travel Planner brings these tasks together into one application.
-
-The user provides their travel requirements, and the system processes them through multiple specialized agents. Each agent focuses on a specific planning area, and the final planner combines the results into a personalized travel itinerary.
+- Personalized travel planning
+- Multi-Agent AI architecture
+- Destination planning
+- Budget planning
+- Accommodation planning
+- Transportation planning
+- Local experience planning
+- Day-wise itinerary generation
+- FastAPI backend
+- Swagger API documentation
+- Web frontend
+- API testing
 
 ---
 
-# 🤖 Multi-Agent Architecture
+## **Problem**
 
-```text
-                         👤 USER
-                           │
-                           ▼
-                 🖥️ Travel Planner UI
-                           │
-                           ▼
-                    ⚡ FastAPI API
-                           │
-                           ▼
-                🧠 Trip Planning System
-                           │
-          ┌────────────────┼────────────────┐
-          │                │                │
-          ▼                ▼                ▼
-   📍 Destination     💰 Budget       🏨 Accommodation
-      Agent              Agent              Agent
-          │                │                │
-          └────────────────┼────────────────┘
-                           │
-          ┌────────────────┼────────────────┐
-          │                │                │
-          ▼                ▼                ▼
-   🚆 Transportation   🧭 Local          📅 Trip/
-        Agent         Experience Agent    Planning Agent
-          │                │                │
-          └────────────────┼────────────────┘
-                           ▼
-                  🧠 Final Planner
-                           │
-                           ▼
-                 📋 Complete Itinerary
-                           │
-                           ▼
-                  👤 User Dashboard
-##🔄 Complete Workflow
-👤 User
-   │
-   │ Enter trip requirements
-   ▼
-📝 Trip Request
-   │
-   ├── Trip Type
-   ├── Destination
-   ├── Number of Travelers
-   ├── Dates
-   ├── Budget
-   ├── Travel Style
-   ├── Interests
-   ├── Food Preference
-   ├── Accommodation
-   └── Transportation
-   │
-   ▼
-⚡ FastAPI Backend
-   │
-   ▼
-##🤖 Multi-Agent Travel System
-   │
-   ├── 📍 Destination Planning
-   ├── 💰 Budget Planning
-   ├── 🏨 Accommodation Planning
-   ├── 🚆 Transportation Planning
-   └── 🧭 Local Experience Planning
-   │
-   ▼
-🧠 Final Planner
-   │
-   ▼
-📋 Personalized Itinerary
-   │
-   ▼
-🖥️ Frontend
-   │
-   ▼
-👤 User
-🧠 AI Agents
-📍 Destination Agent
+Planning a trip usually requires checking multiple things separately.
 
-Handles destination-related planning and activities according to the trip requirements.
+Users need to decide where to go, what places to visit, how much to spend, where to stay, how to travel, and which activities match their interests.
 
-💰 Budget Agent
+Managing all these requirements manually can be time-consuming and difficult to personalize.
 
-Considers the user's available budget while preparing the trip plan.
+---
 
-🏨 Accommodation Agent
+## **Solution**
 
-Handles accommodation-related planning according to the user's preferences.
+The Multi-Agent Travel Planner brings these travel-planning tasks together into one application.
 
-🚆 Transportation Agent
+The user provides their travel requirements, and the system processes them through multiple specialized AI agents.
+
+Each agent focuses on a specific part of the planning process, and the final planner combines the results to generate a personalized travel itinerary.
+
+---
+
+## **How It Works**
+
+**1. User Input**
+
+The user enters travel details such as:
+
+- Trip type
+- Starting location
+- Destination
+- Number of travelers
+- Travel dates
+- Budget
+- Travel style
+- Interests
+- Food preferences
+- Accommodation preference
+- Transportation preference
+
+**2. Backend Processing**
+
+The request is sent to the FastAPI backend.
+
+**3. Multi-Agent Processing**
+
+Different AI agents process different parts of the travel request.
+
+**4. Final Planning**
+
+The outputs from the agents are combined by the final planner.
+
+**5. Travel Itinerary**
+
+The system generates a complete personalized travel plan for the user.
+
+---
+
+## **Multi-Agent System**
+
+**Destination Agent**
+
+Handles destination-related planning and suggests places and activities according to the trip requirements.
+
+**Budget Agent**
+
+Considers the user's available budget while preparing the travel plan.
+
+**Accommodation Agent**
+
+Handles accommodation planning according to the user's preferences.
+
+**Transportation Agent**
 
 Considers transportation preferences for the journey.
 
-🧭 Local Experience Agent
+**Local Experience Agent**
 
-Focuses on local experiences, activities, and guide/local-travel experiences.
+Focuses on local experiences, activities, and local guide/traveler experiences.
 
-📅 Trip Planning / Final Planner
+**Final Planner**
 
-Combines the information from the different planning components and generates the final itinerary.
+Combines the outputs from the different planning agents and generates the final travel itinerary.
 
-##🛠️ Tech Stack
-Backend
-Python
-FastAPI
-Pydantic
-REST APIs
-AI / LLM integration
-Frontend
-HTML
-CSS
+---
+
+## **Technology Stack**
+
+**Backend**
+
+Python  
+FastAPI  
+Pydantic  
+REST APIs  
+AI / LLM Integration
+
+**Frontend**
+
+HTML  
+CSS  
 JavaScript
-Development Tools
-Git
-GitHub
-VS Code
+
+**Development Tools**
+
+Git  
+GitHub  
+VS Code  
 Swagger / OpenAPI
-##📁 Project Structure
+
+---
+
+## **Project Structure**
+
+```text
 multi-agent-travel-planner/
 │
 ├── backend/
@@ -187,217 +155,209 @@ multi-agent-travel-planner/
 ├── .gitignore
 ├── README.md
 └── ...
+API Endpoints
 
-The exact files and folders may change as the project continues to be developed.
+Generate Trip
 
-🔌 API
-
-The backend exposes REST APIs through FastAPI.
-
-Generate a Trip
 POST /api/v1/trips/generate
 
-This endpoint accepts the user's travel requirements and generates a travel plan.
+Generates a travel plan based on the user's trip requirements.
 
-Get a Trip
+Get Trip
+
 GET /api/v1/trips/{trip_id}
 
-This endpoint retrieves a generated trip using its trip ID.
+Retrieves a generated trip using its trip ID.
 
-API Documentation
-
-FastAPI provides interactive API documentation at:
+Swagger Documentation
 
 /api/v1/docs
 
-You can use Swagger UI to test the backend APIs directly from the browser.
+FastAPI provides interactive API documentation where the backend APIs can be tested.
 
-🧪 Testing
+Example Trip Request
 
-The backend has been tested through the FastAPI API documentation and endpoints.
+Trip Type: Family
 
-Current API testing includes:
+From: Delhi
+
+To: Jaipur
+
+Dates: 15 October 2026 to 20 October 2026
+
+Travelers: 2
+
+Budget: ₹50,000
+
+Travel Style: Balanced
+
+Interests: Heritage, Photography, Food
+
+Food Preference: Vegetarian / Local Street Food
+
+Accommodation: Boutique / 4-Star
+
+Transportation: Private Cab / Train
+
+Testing
+
+The backend APIs have been tested using FastAPI Swagger documentation.
+
+The main testing flow is:
 
 POST /api/v1/trips/generate
         ↓
-Generate Trip
+Generate Travel Plan
         ↓
-Receive API Response
+200 OK
         ↓
 GET /api/v1/trips/{trip_id}
         ↓
 Retrieve Generated Trip
 
-A successful API response uses HTTP status:
+The trip generation and trip retrieval endpoints have been tested successfully during development.
 
-200 OK
-⚙️ Local Setup
-1. Clone the repository
+Local Setup
+
+1. Clone the Repository
+
 git clone https://github.com/jiyajiyabhola888-blip/multi-agent-travel-planner.git
-2. Open the project
+
+2. Open the Project
+
 cd multi-agent-travel-planner
-3. Create and activate a virtual environment
-Windows
+
+3. Create Virtual Environment
+
+For Windows:
+
 python -m venv venv
+
+Activate the environment:
+
 venv\Scripts\activate
-4. Install backend dependencies
+
+4. Install Dependencies
+
 cd backend
 pip install -r requirements.txt
-5. Configure environment variables
 
-Create a .env file inside the backend directory and add the required API configuration.
+5. Configure Environment Variables
 
-Use .env.example as the reference.
+Create a .env file inside the backend directory.
 
-Never upload API keys or other secrets to GitHub.
+Use .env.example as a reference.
 
-6. Start the backend
+Do not upload API keys or other secrets to GitHub.
 
-Use the project's configured FastAPI startup command.
-
-For a standard FastAPI/Uvicorn setup:
+6. Run the Backend
 
 uvicorn main:app --reload
 
-If the project's entry file is different, use the startup command defined in the backend.
+Open the API documentation:
 
-🖥️ Frontend
-
-The frontend is maintained separately from the backend.
-
-The basic application flow is:
-
-Frontend
-   │
-   ▼
-User enters travel requirements
-   │
-   ▼
-Frontend sends API request
-   │
-   ▼
+http://127.0.0.1:8000/api/v1/docs
+Application Flow
+User
+  ↓
+Travel Planner Frontend
+  ↓
+Trip Requirements
+  ↓
 FastAPI Backend
-   │
-   ▼
-Multi-Agent System
-   │
-   ▼
-Generated Trip
-   │
-   ▼
-Frontend displays itinerary
-📊 Example Trip Request
+  ↓
+Multi-Agent Travel System
+  ↓
+Destination Agent
+Budget Agent
+Accommodation Agent
+Transportation Agent
+Local Experience Agent
+  ↓
+Final Planner
+  ↓
+Personalized Travel Itinerary
+  ↓
+Frontend
+  ↓
+User
+Security
 
-Example:
-
-Trip Type: Family
-From: Delhi
-To: Jaipur
-
-Dates:
-15 October 2026 → 20 October 2026
-
-Travelers: 2
-Budget: ₹50,000
-
-Travel Style: Balanced
-
-Interests:
-- Heritage
-- Photography
-- Food
-
-Food Preference:
-Vegetarian / Local Street Food
-
-Accommodation:
-Boutique / 4-Star
-
-Transportation:
-Private Cab / Train
-
-The system uses these preferences as inputs while generating the travel plan.
-
-🔐 Security
-
-The project follows basic security practices during development:
+The project follows basic security practices during development.
 
 API keys should be stored in environment variables.
-.env files should not be committed to GitHub.
+.env files should not be uploaded to GitHub.
 .env.example is provided as a configuration reference.
-API input validation is handled through the backend.
+Backend input validation is used for API requests.
 Secrets should never be hardcoded into frontend code.
-🚀 Current Project Status
-✅ Currently Implemented
+Current Project Status
+
+Currently Implemented
+
 Travel planning application
 FastAPI backend
-Multi-agent planning architecture
+Multi-Agent architecture
 Trip generation API
 Trip retrieval API
 Swagger/OpenAPI documentation
 Frontend structure
-Git/GitHub repository
-Basic API testing
-🔄 Planned / Future Improvements
+GitHub repository
+API testing
 
-The following features can be added in future development phases:
+Future Improvements
 
-🔐 User signup/login
-👤 User profiles
-💾 Persistent database
-🧠 Long-term user preferences
-📚 Trip history
-❤️ Saved trips
-👍 User feedback and recommendation improvement
-🎯 More advanced personalization
-🌐 Production deployment
-📱 Improved mobile experience
-🗺️ Maps and location services
-💳 Booking integrations
-🧑‍🤝‍🧑 Local guide/traveler connections
+User signup and login
+User profiles
+Persistent database
+User preference memory
+Trip history
+Saved trips
+User feedback system
+Advanced personalization
+Production deployment
+Improved mobile experience
+Maps and location services
+Booking integrations
+Local guide/traveler connections
 
-These are planned improvements and are not represented as currently completed features.
+These features are planned for future development and are not presented as currently completed features.
 
-🔮 Future Personalization Architecture
-                👤 USER
-                   │
-                   ▼
-          👤 User Preferences
-                   │
-                   ▼
-             📝 Trip Request
-                   │
-                   ▼
-             🤖 AI Agents
-                   │
-                   ▼
-            📋 Travel Plan
-                   │
-          ┌────────┴────────┐
-          ▼                 ▼
-     💾 Save Trip       ❤️ Feedback
-          │                 │
-          └────────┬────────┘
-                   ▼
-             📚 Trip History
-                   │
-                   ▼
-          🧠 Future Personalization
-                   │
-                   ▼
-       More Relevant Trip Plans
-🌟 Why This Project?
+Future Personalization
 
-This project demonstrates practical concepts used in modern software and AI applications:
+The future version of the application can remember user preferences, previous trips, and feedback.
 
-Multi-agent AI systems
+This can allow the system to create more personalized travel plans over time.
+
+The future personalization flow can be:
+
+User
+  ↓
+User Preferences
+  ↓
+New Trip Request
+  ↓
+AI Agents
+  ↓
+Travel Plan
+  ↓
+Save Trip / Feedback
+  ↓
+Trip History
+  ↓
+Personalization
+  ↓
+Future Travel Plans
+Why This Project?
+
+This project demonstrates practical concepts used in modern AI and software development.
+
+Multi-Agent AI systems
 Backend API development
 Frontend-backend integration
-API design
+REST API design
 Input validation
-AI-powered decision making
-Modular software architecture
-Git and GitHub workflow
-Testing and documentation
-
-The project is designed to grow from an initial working prototype into a more complete personalized travel platform.
+AI-powered planning
+Modular architecture
+Git and GitHub
+API testing
+Technical documentation
